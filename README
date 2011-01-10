@@ -1,0 +1,29 @@
+A really quick and dirty screen scraper for pulling summary data from your NatWest Online Banking (NWOLB) account.
+
+You should just need to put your details (date of birth, the four digit code you normally use on the login screen after the DOB, and your pin) into the config.rb, then give natwoogle.rb a kick.
+
+Optionally you can pass the name of a custom config file to natwoogle.rb - There's a gitignore on _config.rb, so you might copy config.rb to _config.rb, tweak that with your account details then call ./natwoogle.rb _config.rb
+
+The only dependency ought to be a moderately recent Mechanize (gem install mechanize)
+
+It's really rough and ready as I didn't have much time. 
+
+When I've got a moment I'll tidy it up, turn it into a library, and add deeper crawling of account data and a variety of output formats, including Google Docs.
+
+It may get broken with the impending updates to the banking system. But I'll try to keep it updated and build in some robustness.  
+
+Patches are welcome.
+
+It's safe to assume it's GPL'd - I'll get around to making that official in a bit.
+
+If the script doesn't work for you, please open an issue and I'll investigate. Obviously I haven't got enough accounts to debug this widely on my own. 
+
+Open an issue here: http://github.com/raettig/natwoogle/issues
+
+If possible, please also email me the HTML of your account summary page. (Please anonymise the account details and balances first!). Either by logging the output of 'puts page_part4.body', or saving the page through your usual browser.
+
+I'll use any anonymised summary pages as my test suite and can cheerily tighten up the xpath searches.
+
+
+-chrisr.
+
